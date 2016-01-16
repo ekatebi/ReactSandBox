@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NICE, SUPER_NICE } from './colors';
+import { NICE, BLUE, RED, SUPER_NICE } from './colors';
 
 class Counter extends Component {
   constructor(props) {
@@ -31,8 +31,28 @@ export class App extends Component {
   render() {
     return (
       <div>
-        <Counter increment={1} color={NICE} />
+        <Counter increment={9} color={NICE} />
         <Counter increment={5} color={SUPER_NICE} />
+      </div>
+    );
+  }
+}
+
+export class AppRed extends Component {
+  render() {
+    return (
+      <div>
+        <Counter increment={3} color={RED} />
+      </div>
+    );
+  }
+}  
+
+export class AppBlue extends Component {
+  render() {
+    return (
+      <div>
+        <Counter increment={6} color={BLUE} />
       </div>
     );
   }
