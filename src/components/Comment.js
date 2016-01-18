@@ -1,14 +1,22 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 export class Comment extends Component {
   render() {
+  	
+  	const {author, children} = this.props;
+
  	return (
  		<div className="comment">
 			<h2 className="commentAuthor">
-		       {this.props.author}
+		       { author }
 		    </h2>
-		    {this.props.children} 		
+		    { children } 		
 	     </div>
  	);	
   }	
+}
+
+Comment.propTypes = {
+	author: PropTypes.string.isRequired,
+	children: PropTypes.array.isRequired
 }

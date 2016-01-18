@@ -51,10 +51,16 @@
     "webpack-hot-middleware": "^2.6.0"
   },
   "dependencies": {
+    "bootswatch": "^3.3.6",
     "immutable": "^3.7.6",
     "jquery": "^2.2.0",
     "react": "^0.14.3",
+    "react-bootstrap": "^0.28.2",
     "react-dom": "^0.14.3",
-    "react-router": "^1.0.0-rc3"
+    "react-redux": "^4.0.6",
+    "react-router": "^1.0.0-rc3",
+    "redux": "^3.0.5",
+    "redux-logger": "^2.3.2",
+    "redux-thunk": "^1.0.3"
   }
 }

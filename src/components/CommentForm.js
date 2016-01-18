@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 export class CommentForm extends Component {
 
@@ -34,6 +34,9 @@ constructor() {
   }
 
   render() {
+
+  	const { value, onChange, options } = this.props
+
  	return (
  	  <div className="commentForm">
 		<form className="commentForm" onSubmit={this.handleSubmit}>
@@ -45,4 +48,8 @@ constructor() {
  	);	
   }	
 
+}
+
+CommentForm.propTypes = {
+  posts: PropTypes.array.isRequired
 }

@@ -9,17 +9,19 @@ constructor() {
  this.props = { data: {} };
 }
 
+  const { data } = this.props; 
+
   render() {
  
     console.log('CommentList', this.props.data);
 
-    if (this.props.data === null)
+    if (data === null)
     	return (
 	 		<div className="commentList">
     	    </div>
     		);
 
-    var obj = this.props.data;
+    var obj = data;
 
 //	let arr = Object.keys(obj).map((k) => obj[k]);
 	let arr = Object.keys(obj).map((k) => {
@@ -43,4 +45,8 @@ constructor() {
         </div>
  	);	
   }	
+}
+
+CommentList.propTypes = {
+  data: PropTypes.Object
 }

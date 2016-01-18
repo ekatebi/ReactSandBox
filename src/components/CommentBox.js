@@ -1,7 +1,12 @@
 import $ from 'jquery';
 import React, { Component } from 'react';
+import { createStore } from 'redux';
 import { CommentList } from './CommentList';
 import { CommentForm } from './CommentForm';
+
+
+// Its API is { subscribe, dispatch, getState }.
+let store = createStore(commentsReducer);
 
 export class CommentBox extends Component {
 

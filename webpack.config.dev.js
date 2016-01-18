@@ -22,6 +22,29 @@ module.exports = {
       test: /\.jsx?/,
       loaders: ['babel'],
       include: path.join(__dirname, 'src')
-    }]
+    },
+      { 
+        test: /\.json$/, 
+        loader: 'json-loader',
+        include: path.resolve(__dirname, 'test/data')
+      },
+      { 
+        test: /\.less$/, 
+        loaders: ['style-loader','css-loader','less-loader'],
+        include: path.resolve(__dirname, 'src/style/theme'),
+        exclude: /node_modules/
+      },
+      { 
+        test: /\.css$/, 
+        loaders: ['style-loader', 'css-loader'],
+        include: path.resolve(__dirname, 'src/style'),
+        exclude: /node_modules/
+      },
+      { 
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
+        loader: 'url-loader?limit=100000',
+        include: path.resolve(__dirname, 'node_modules')
+      }    
+    ]
   }
 };
